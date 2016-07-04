@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataDefinition>
+
+	<MajorVersion>1</MajorVersion>
+	<MinorVersion>0</MinorVersion>
+	<!-- You can use this is the TE definition such as   BreakingAction == BAType.Good   -->
+	<EnumDefs>
+		<EnumDef name="BAType">
+			<Enum>
+				<Value name="Undefined">0</Value>
+				<Value name="Good">1</Value>
+				<Value name="Medium-Good">2</Value>
+				<Value name="Medium">3</Value>
+				<Value name="Medium-Poor">4</Value>
+				<Value name="Poor">5</Value>
+			</Enum>
+		</EnumDef>
+	</EnumDefs>
+
+
+	<ParameterDefs>
+		<ParameterDef name="BreakingAction" ></ParameterDef>
+		<ParameterDef name="PressureAltitude" ></ParameterDef>
+		<ParameterDef name="PitchAngle" ></ParameterDef>
+	</ParameterDefs>
+</DataDefinition>

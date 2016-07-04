@@ -1,38 +1,15 @@
-# XmlSerializationSamples
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
 
-This example demontrade of how to map xml attribute name, element name and array element name to C# Class with the XML serialization.
-
-## Xml
-``` xml
-<DataDefinition>
-	<MajorVersion>1</MajorVersion>
-	<MinorVersion>0</MinorVersion>
-	<!-- You can use this is the TE definition such as   BreakingAction == BAType.Good   -->
-	<EnumDefs>
-		<EnumDef name="BAType">
-			<Enum>
-				<Value name="Undefined">0</Value>
-				<Value name="Good">1</Value>
-				<Value name="Medium-Good">2</Value>
-				<Value name="Medium">3</Value>
-				<Value name="Medium-Poor">4</Value>
-				<Value name="Poor">5</Value>
-			</Enum>
-		</EnumDef>
-	</EnumDefs>
-
-
-	<ParameterDefs>
-		<ParameterDef name="BreakingAction" ></ParameterDef>
-		<ParameterDef name="PressureAltitude" ></ParameterDef>
-		<ParameterDef name="PitchAngle" ></ParameterDef>
-	</ParameterDefs>
-</DataDefinition>
-```
-
-## CSharp code
-``` java
- [DataContract(Namespace = "http://schemas.cae.com/ng-system")]
+namespace XmlSerializationSamples
+{
+  /// <remarks/>
+  [DataContract(Namespace = "http://schemas.cae.com/ng-system")]
   [Serializable]
   public class DataDefinition
   {
@@ -91,4 +68,5 @@ This example demontrade of how to map xml attribute name, element name and array
     [System.Xml.Serialization.XmlTextAttribute()]
     public string Value { get; set; }
   }
-```
+
+}
